@@ -10,7 +10,7 @@
            else if (!filter_var($_POST['email'],FILTER_VALIDATA_EMAIL)) $error.="<br />Please enter a valid email address.";
         if (!$_POST['password']) $error.="<br />Please enter your password";
            else {
-               if (strlen($_POST['password'])<8) $error.="<br />Please enter a password at least 8 characters."
+               if (strlen($_POST['password'])<8) $error.="<br />Please enter a password at least 8 characters.";
                if (!preg_match('`[A-Z]`',$_POST['password'])) $error.="<br />Please include at least one capital letter in your password.";
            }
         if($error) $error = "There were error(s) in your signup details:".$error;
